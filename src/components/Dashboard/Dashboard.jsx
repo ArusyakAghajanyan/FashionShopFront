@@ -1,4 +1,10 @@
-import { getOrders, getOrderByStatus, authoriseUser,getProducts } from "../../services/api";
+import {
+  getOrders,
+  getOrderByStatus,
+  authoriseUser,
+  getProducts,
+  changeOrderStatus
+} from "../../services/api";
 import { useAuth0 } from "@auth0/auth0-react";
 import { domainName } from "../../config";
 import { Table, Icon } from "semantic-ui-react";
@@ -13,24 +19,26 @@ function Dashboard() {
   const { error, isAuthenticated, isLoading, user, getAccessTokenSilently } =
     useAuth0();
   const [orderList, setOrderList] = useState([]);
-  const [pendingProducts, setPendingProducts] = useState([]);
-  const [allProducts, setAllProducts] = useState([]);
+  
+  const [adminData, setAdminData] = useState({});
 
   async function orderShow() {
     try {
       const token = await getAccessTokenSilently();
       let data = null;
-      let productData=null;
-    
+      // let productData=null;
+
       if (user && user[`${domainName}roles`].includes(ADMIN)) {
-        // data = await getOrderByStatus(user.sub, token, UNPAID);
-        // productData = await getProducts();
-        console.log("test")
-       const dataResult = await Promise.all([getProducts(), getOrderByStatus(user.sub, token, UNPAID)])
-        setAllProducts(dataResult[0]);
-        setPendingProducts(dataResult[1]);       
-        console.log(dataResult)
-      } else { 
+        const dataResult = await Promise.all([
+          getProducts(),
+          getOrderByStatus(user.sub, token, UNPAID),
+        ]);
+        setAdminData((adminData) => ({
+          ...adminData,
+          allProducts: dataResult[0],
+          pendingProducts: dataResult[1],
+        }));
+      } else {
         data = await getOrders(user.sub, token);
         if (data && Array.isArray(data)) {
           if (data.length !== 0) setOrderList(data);
@@ -41,17 +49,27 @@ function Dashboard() {
         }
       }
     } catch (error) {
-      console.log("hajox chi");
+      console.log("user not authorised");
     }
   }
+
   useEffect(() => {
-    console.log("use effect call");
     if (user) orderShow();
-    console.log("user=", user);
-    if (user) {
-      console.log("userDomain", user[`${domainName}roles`]);
-    }
   }, [user]);
+  const {pendingProducts, allProducts} = adminData;
+ 
+async function changeStatus(status, order_id) {
+
+try {
+  const token = await getAccessTokenSilently();
+  const changeResult = await changeOrderStatus(user.sub, token, order_id, status)
+  console.log("changeResult", changeResult);
+}
+catch (error) {
+  console.log("sxal es arel");
+}
+}
+
   return (
     <div className="dashboard ui container">
       {user &&
@@ -59,7 +77,7 @@ function Dashboard() {
       user[`${domainName}roles`].includes(ADMIN) ? (
         <>
           <AddProduct />
-          <Tabs pendingProducts={pendingProducts} allProducts={allProducts} />
+          <Tabs pendingProducts={pendingProducts} allProducts={allProducts} changeStatus ={changeStatus} />
         </>
       ) : (
         <DataTable list={orderList} />

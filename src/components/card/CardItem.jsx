@@ -8,7 +8,6 @@ function CardItem({ description, image, name, price,item }) {
   const {isAuthenticated,user} =useAuth0();
   return (
     <Card centered>
-      {/* <Image src={img.length > 0 && img[0].imagePath.includes("localhost:8080") ? img[0].imagePath : logo } height="200px" /> */}
       <Image src={image} wrapped ui={false} />
       <Card.Content>
         <Card.Header>{name}</Card.Header>

@@ -10,7 +10,7 @@ const options = [
 ];
 
 const FormFieldError = ({userName,changeOptions}) => {
-   
+  
   function handleChange(event){
     changeOptions({[event.target.name]:event.target.value});
   }
@@ -61,8 +61,6 @@ const FormFieldError = ({userName,changeOptions}) => {
           />
         </Form.Field>
     {/* </Form.Group> */}
-    
-    
   </Form>
   )
 }

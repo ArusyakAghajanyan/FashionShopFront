@@ -10,14 +10,13 @@ function BuyProduct({ productInfo, item }) {
     useAuth0();
 
   const { description, image, name, price } = productInfo;
-
   const [open, setOpen] = useState(false);
   const inintFormData = { address: "", phone: "", paymentMethod: "cash" };
   const [options, setOptions] = useState(inintFormData);
 
   async function confirmAction() {
     try {
-      const token = await getAccessTokenSilently();      
+      const token = await getAccessTokenSilently();
       const userObj = {
         id: user.sub,
         email: user.email,
@@ -68,7 +67,7 @@ function BuyProduct({ productInfo, item }) {
         <Segment>
           <Segment.Inline>
             <Button color="black" onClick={() => setOpen(false)}>
-              Close
+              Nope
             </Button>
             <Button
               content="Confirm"

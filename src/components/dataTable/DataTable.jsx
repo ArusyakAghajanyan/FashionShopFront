@@ -1,13 +1,14 @@
 import { Table, Icon } from "semantic-ui-react";
 import productImg from "../../img/img1.jpg";
 import { List, Image, Button } from "semantic-ui-react";
-import "./DataTable.css";
+import "./dataTable.css";
 
 function DataTable({ list }) {
+    
   console.log(list);
   return (
     <List divided verticalAlign="middle">
-      {list.map((item) => {
+      {list && list.map((item) => {
         return (
           <List.Item>
             <List.Content floated="right">
@@ -20,10 +21,7 @@ function DataTable({ list }) {
             />
              <List.Content>  
              <List horizontal>
-             <List.Content>                          
-              <List.Header>{item.product.name} </List.Header>
-              {item.product.price}
-            </List.Content>
+             
             <List.Content > {item.orderStatus} 
             </List.Content>
                 </List>
