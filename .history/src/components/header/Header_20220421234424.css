@@ -1,0 +1,30 @@
+.ui.fixed.menu.top,
+.ui.sidebar.menu {
+  
+}
+.ui.inverted.icon.menu .item {
+  color: #150101;
+}
+.customHeader {
+  height: 60px;
+}
+
+#left-pusher.pusher {
+  height: 100%;
+}
+
+.customHeader .pushable {
+  position: fixed;
+  z-index: 101;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  overflow-x: visible;
+}
+
+#left-pusher .menu {
+  top: 60px;
+  width: 120px;
+  height: auto !important;
+  max-height: inherit;
+}
