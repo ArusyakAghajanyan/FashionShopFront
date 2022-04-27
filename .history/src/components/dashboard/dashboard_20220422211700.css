@@ -1,0 +1,12 @@
+.ui.green.button {
+    
+margin-top: 80px;
+border: 2px solid #D64374;
+background-color: #D64374;
+padding: 20px;
+border-radius: 20px;
+}
+.ui.green.button:hover{
+    background-color: #F2CEDA;
+    color: ;
+}

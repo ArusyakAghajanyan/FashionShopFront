@@ -1,0 +1,13 @@
+.ui.green.button {
+  margin-top: 80px;
+  background-color: #d64374;
+  padding: 20px;
+  border-radius: 20px;
+}
+.ui.green.button:hover {
+  background-color: #f2ceda;
+  color: #d64374;
+}
+.ui.fluid.vertical.tabular.menu{
+    
+}

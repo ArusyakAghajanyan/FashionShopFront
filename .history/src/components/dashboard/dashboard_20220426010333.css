@@ -1,0 +1,28 @@
+.ui.green.button {
+  margin-top: 80px;
+  background-color: #d64374;
+  padding: 20px;
+  border-radius: 20px;
+}
+.ui.green.button:hover {
+  background-color: #f2ceda;
+  color: #d64374;
+ 
+}
+.ui.fluid.vertical.tabular.menu{
+    background-color: #f2ceda;
+    color: #d64374;
+    border:1px solid #d64374;
+}
+.ui.bottom.attached.segment.active.tab{
+    background-color: #f2ceda;  
+    color: #d64374; 
+    border:1px solid #d64374;
+    cursor: pointer;
+}
+.dashboard{
+  margin-top: 80px;
+  border: 2px solid #d64374;
+  padding: 20px;
+  border-radius: 20px;
+  }
