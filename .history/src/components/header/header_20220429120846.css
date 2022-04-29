@@ -5,22 +5,19 @@
   
 }
 #menuDesktop, #menuMobile{
-  /* color: #D23166; */
+  color: #D23166;
 
   font-family: Century;
   font-size: large;
-  background: rgba(255, 255, 255, 0.7);
+  background: #D23166;
   height: 80px;
 
 
 }
 .ui.inverted.icon.menu.item:hover {
-  color: #D23166;
+  color: #F8EDF0;
 }
-.ui.inverted .menu.item,.ui.inverted.menu .item>a:not(.ui) {
-  color: #D23166;
-}
-.ui.inverted .menu.item{
+.ui.inverted.menu.item,.ui.inverted.menu .item>a:not(.ui) {
   color: #D23166;
 }
 

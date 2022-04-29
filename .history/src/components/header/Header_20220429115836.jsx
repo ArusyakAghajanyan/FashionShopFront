@@ -98,7 +98,7 @@ const NavBarDesktop = ({leftItems, rightItems}) => {
         {rightItems && rightItems.length>0 && rightItems.map((item, index) => {
           if (item.children) {
             return (
-              <Menu.Item id="emailMobile" key={`rightParams${index}`}>
+              <Menu.Item id="emailMobile"  key={`rightParams${index}`}>
                 {item.children}
                 </Menu.Item>
             );
@@ -218,6 +218,9 @@ function Header() {
   return (
     <MediaContextProvider>
       <NavBar leftItems={leftItems} rightItems={rightItems}>
+      <NavBar leftItems={leftItems} rightItems={rightItems}>
+
+ <NavBar leftItems={leftItems} rightItems={rightItems}>
         {/* <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" /> */}
       </NavBar>
     </MediaContextProvider>

@@ -31,15 +31,11 @@ function CardItem({
 
       <Card.Content extra className="buy-info">
         {price}
-        {currency}
         {isAuthenticated ? (
           <BuyProduct
           className="buyButton" 
             item={item}
             productInfo={{ description, image, name, price }}
-            setResponseInfo={setResponseInfo}
-                        imageList = {imageList}
-                        stock={stock}
             
           />
         ) : (

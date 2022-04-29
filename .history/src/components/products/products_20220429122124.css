@@ -2,11 +2,11 @@
 #addNewProductButton{
     margin: 10px;
         color: white;
-        background-image: linear-gradient( #F2CEDA, #D23166);
+        background-image: linear-gradient( #f5e1a3, #a96f23);
         border: 1px solid #D23166;
     }
     #addNewProductButton:hover{
         color: #D23166;
-        border:1px solid #D23166;
-        background: #F2CEDA;
+        border:1px solid #976420;
+        background: #fcf9f4;
     }

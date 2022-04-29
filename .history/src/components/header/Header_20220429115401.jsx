@@ -98,7 +98,7 @@ const NavBarDesktop = ({leftItems, rightItems}) => {
         {rightItems && rightItems.length>0 && rightItems.map((item, index) => {
           if (item.children) {
             return (
-              <Menu.Item id="emailMobile" key={`rightParams${index}`}>
+              <Menu.Item key={`rightParams${index}`}>
                 {item.children}
                 </Menu.Item>
             );

@@ -69,8 +69,8 @@ function AddProduct({setResponseInfo}) {
             </Button>
             <Button
               content="Confirm"
+              id="addNewProductButton
               id="addNewProductButton"
-      
               icon="checkmark"
               onClick={() => {
                 setOpen(false);

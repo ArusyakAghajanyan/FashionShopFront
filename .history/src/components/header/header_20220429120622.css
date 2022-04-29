@@ -5,8 +5,8 @@
   
 }
 #menuDesktop, #menuMobile{
-  /* color: #D23166; */
-
+  color: #D23166;
+  text-shadow: #282c34;
   font-family: Century;
   font-size: large;
   background: rgba(255, 255, 255, 0.7);
@@ -15,13 +15,10 @@
 
 }
 .ui.inverted.icon.menu.item:hover {
-  color: #D23166;
+  color: #F8EDF0;
 }
-.ui.inverted .menu.item,.ui.inverted.menu .item>a:not(.ui) {
-  color: #D23166;
-}
-.ui.inverted .menu.item{
-  color: #D23166;
+.ui.inverted.menu.item,.ui.inverted.menu .item>a:not(.ui) {
+  color: #150101;
 }
 
 .customHeader {

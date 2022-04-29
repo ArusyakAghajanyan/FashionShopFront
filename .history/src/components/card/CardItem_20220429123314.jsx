@@ -5,8 +5,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { Link } from "react-router-dom";
 import productImg from "../../img/img1.jpg";
 
-function CardItem({   
-  description,
+function CardItem({   description,
   image,
   name,
   price,
@@ -31,15 +30,11 @@ function CardItem({
 
       <Card.Content extra className="buy-info">
         {price}
-        {currency}
         {isAuthenticated ? (
           <BuyProduct
           className="buyButton" 
             item={item}
             productInfo={{ description, image, name, price }}
-            setResponseInfo={setResponseInfo}
-                        imageList = {imageList}
-                        stock={stock}
             
           />
         ) : (

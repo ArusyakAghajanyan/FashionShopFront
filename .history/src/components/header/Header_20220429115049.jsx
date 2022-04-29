@@ -66,7 +66,7 @@ const NavBarMobile = ({
             {rightItems.map((item, index) => {
               if (item.children) {
                 return (
-                  <Menu.Item key={`rightParams${index}`} className="menuItem" id="emailMobile">
+                  <Menu.Item key={`rightParams${index}`}>
                     {item.children}
                   </Menu.Item>
                 );
@@ -84,21 +84,20 @@ const NavBarMobile = ({
 const NavBarDesktop = ({leftItems, rightItems}) => {
 
   return (
-
-    <Menu fixed="top" inverted id="menuDesktop">
+    <Menu fixed="top" inverted>
       <Menu.Item key={nanoid()}>
         <Image as={Link} to="/" size="mini" src={logo} className="logoIcon" />
       </Menu.Item>
 
       {leftItems && leftItems.length>0 && leftItems.map((item, index) => (
-        <Menu.Item className="menuItem"  {...item} key={index} />
+        <Menu.Item {...item} key={index} />
       ))}
 
 <Menu.Menu position="right" key={nanoid()}>
         {rightItems && rightItems.length>0 && rightItems.map((item, index) => {
           if (item.children) {
             return (
-              <Menu.Item id="emailMobile" key={`rightParams${index}`}>
+              <Menu.Item key={`rightParams${index}`}>
                 {item.children}
                 </Menu.Item>
             );

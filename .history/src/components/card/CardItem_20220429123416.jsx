@@ -37,9 +37,6 @@ function CardItem({
           className="buyButton" 
             item={item}
             productInfo={{ description, image, name, price }}
-            setResponseInfo={setResponseInfo}
-                        imageList = {imageList}
-                        stock={stock}
             
           />
         ) : (

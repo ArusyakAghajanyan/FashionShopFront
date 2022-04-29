@@ -1,31 +1,14 @@
 .ui.fixed.menu.top,
 .ui.sidebar.menu {
   background-color: #F2CEDA;
-  color: inherit;
   
 }
-#menuDesktop, #menuMobile{
-  /* color: #D23166; */
 
-  font-family: Century;
-  font-size: large;
-  background: rgba(255, 255, 255, 0.7);
-  height: 80px;
-
-
+.ui.inverted.menu.item,.ui.inverted.menu .item>a:not(.ui) {
+  color: #150101;
 }
-.ui.inverted.icon.menu.item:hover {
-  color: #D23166;
-}
-.ui.inverted .menu.item,.ui.inverted.menu .item>a:not(.ui) {
-  color: #D23166;
-}
-.ui.inverted .menu.item{
-  color: #D23166;
-}
-
 .customHeader {
-  height: 80px;
+  height: 60px;
 }
 
 
@@ -45,7 +28,7 @@
 }
 
 #left-pusher .menu {
-  top: 80px;
+  top: 60px;
   width: 120px;
   height: auto !important;
   max-height: inherit;
