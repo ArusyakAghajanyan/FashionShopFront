@@ -1,0 +1,13 @@
+.ui.pagination.secondary.menu{
+    display: flex;
+    justify-content: center;
+}
+.ui.tabular.menu .item{
+    color: #d64374;
+}
+.ui.vertical.tabular.menu .active.item {
+    margin: 10px;
+    color: white;
+    background-image: linear-gradient( #F2CEDA, #D23166);
+    border: 1px solid #D23166;
+}

@@ -1,0 +1,10 @@
+.ui.pagination.secondary.menu{
+    display: flex;
+    justify-content: center;
+}
+.ui.tabular.menu .item{
+    color: #d64374;
+}
+.ui.vertical.tabular.menu .active.item {
+    
+}

@@ -1,0 +1,60 @@
+.ui.fixed.menu.top,
+.ui.sidebar.menu {
+  background-color: #F2CEDA;
+  color: inherit;
+  
+}
+#menuDesktop, #menuMobile{
+  color: #D23166;
+
+  font-family: Century;
+  font-size: large;
+  background: rgba(255, 255, 255, 0.7);
+  height: 80px;
+
+
+}
+.ui.inverted.menu .item,.ui.inverted.icon.menu.item:hover, {
+  color: #D23166;
+} 
+.ui.inverted .menu.item,.ui.inverted.menu .item>a:not(.ui) {
+  color: #D23166;
+} 
+.ui.inverted.menu .item{
+  color: #D23166;
+}
+
+.customHeader {
+  height: 80px;
+}
+
+
+#left-pusher.pusher {
+  height: 100%;
+}
+
+.customHeader .pushable {
+  position: fixed;
+  z-index: 101;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  overflow-x: visible;
+  color: 
+  #150101;
+}
+
+#left-pusher .menu {
+  top: 80px;
+  width: 120px;
+  height: auto !important;
+  max-height: inherit;
+}
+#drop-down {
+  background-color:  #F8EDF0;
+  border: 1px solid 
+  #D23166;
+}
+.drop-down {
+  color: #D23166;
+}
